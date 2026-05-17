@@ -1,4 +1,4 @@
-const CACHE_NAME = "kinesiology-off-meridian-board-v1";
+const CACHE_NAME = "kinesiology-off-meridian-board-20260517061050";
 
 const getBasePath = () => {
   const scopeUrl = new URL(self.registration.scope);
