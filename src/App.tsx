@@ -20,19 +20,24 @@ type MeridianKey =
 type SelectedState = Partial<Record<MeridianKey, { L: boolean; R: boolean }>>;
 
 const MERIDIANS = [
-  { key: "liver", label: "肝", element: "wood" },
-  { key: "gall", label: "胆", element: "wood" },
-  { key: "heart", label: "心", element: "fire" },
-  { key: "small", label: "小腸", element: "fire" },
-  { key: "pericard", label: "心包", element: "fire" },
-  { key: "triple", label: "三焦", element: "fire" },
-  { key: "spleen", label: "脾", element: "earth" },
-  { key: "stomach", label: "胃", element: "earth" },
-  { key: "lungs", label: "肺", element: "metal" },
-  { key: "large", label: "大腸", element: "metal" },
-  { key: "kidney", label: "腎", element: "water" },
-  { key: "bladder", label: "膀胱", element: "water" },
-] as const satisfies ReadonlyArray<{ key: MeridianKey; label: string; element: ElementKey }>;
+  { key: 'stomach', number: 3, label: '胃経', element: 'earth' },
+  { key: 'spleen', number: 4, label: '脾経', element: 'earth' },
+  { key: 'heart', number: 5, label: '心経', element: 'fire' },
+  { key: 'small', number: 6, label: '小腸経', element: 'fire' },
+  { key: 'bladder', number: 7, label: '膀胱経', element: 'water' },
+  { key: 'kidney', number: 8, label: '腎経', element: 'water' },
+  { key: 'pericard', number: 9, label: '心包経', element: 'fire' },
+  { key: 'triple', number: 10, label: '三焦経', element: 'fire' },
+  { key: 'gall', number: 11, label: '胆経', element: 'wood' },
+  { key: 'liver', number: 12, label: '肝経', element: 'wood' },
+  { key: 'lungs', number: 13, label: '肺経', element: 'metal' },
+  { key: 'large', number: 14, label: '大腸経', element: 'metal' },
+] as const satisfies ReadonlyArray<{
+  key: MeridianKey;
+  number: number;
+  label: string;
+  element: ElementKey;
+}>;
 
 const ELEMENT_POSITIONS: Record<ElementKey, { top: string; left: string }> = {
   wood: { top: "12%", left: "50%" },
@@ -139,7 +144,7 @@ function App() {
           return (
             <div key={meridian.key} className="meridian-row">
               <div className="meridian-name" style={{ borderColor: ELEMENT_COLORS[meridian.element] }}>
-                {meridian.label}
+                {meridian.number}：{meridian.label}
               </div>
               <div className="side-buttons">
                 {(["L", "R"] as Side[]).map((side) => (
