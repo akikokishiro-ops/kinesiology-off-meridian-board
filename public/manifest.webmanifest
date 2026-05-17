@@ -1,0 +1,19 @@
+{
+  "name": "OFF経絡チェックボード",
+  "short_name": "OFF経絡",
+  "description": "左右のOFF経絡をタップで選択し、五行図に反映するキネシオロジー用チェックボード",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f8f7f2",
+  "theme_color": "#5f8f72",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
