@@ -1,0 +1,135 @@
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid #e5e5e0;
+  box-shadow: 0 3px 10px rgba(60, 60, 60, 0.05);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.clear-button {
+  border: 0;
+  background: #ecebe5;
+  color: #4f4f4f;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+}
+
+.image-wrap {
+  position: relative;
+}
+
+.image-wrap img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.overlay {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(218, 84, 84, 0.92);
+  color: #fff;
+  border-radius: 9px;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  text-align: center;
+  max-width: 34%;
+}
+
+.overlay-title {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.meridian-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #efefe8;
+}
+
+.meridian-row:last-child {
+  border-bottom: 0;
+}
+
+.meridian-name {
+  border-left: 6px solid;
+  padding-left: 10px;
+  min-width: 70px;
+  font-weight: 600;
+}
+
+.side-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.side-button {
+  min-width: 54px;
+  min-height: 42px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-weight: 700;
+}
+
+.side-button.active {
+  background: #d85e5e;
+  color: #fff;
+  border-color: #c34e4e;
+}
+
+.selected-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.selected-header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.tag-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #fce8e8;
+  border: 1px solid #f0b9b9;
+  color: #9f3f3f;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.88rem;
+}
+
+.empty {
+  color: #7f7f7f;
+  margin: 0;
+}
